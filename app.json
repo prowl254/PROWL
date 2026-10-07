@@ -1,10 +1,99 @@
 {
-  "name": "prowl-feature-loader",
-  "description": "PROWL feature loader",
-  "repository": "https://github.com/peace-amani/rowl",
-  "keywords": ["prowl", "whatsapp", "bot", "loader"],
-  "stack": "heroku-24",
+  "name": "PROWL WhatsApp Bot",
+  "description": "PROWL is a powerful, customizable WhatsApp automation bot built for reliable deployment on Heroku and other Node.js platforms. It includes session-based authentication, group moderation, media tools, AI integrations, persistent settings, scheduled utilities, and a clean command system.",
+  "logo": "https://i.ibb.co/zWGkw7Jz/767022de0778.png",
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "prowl",
+    "baileys",
+    "automation",
+    "moderation",
+    "session"
+  ],
+  "repository": "https://github.com/prowl254/PROWL",
+  "website": "https://github.com/prowl254/PROWL",
+  "success_url": "https://github.com/prowl254/PROWL#readme",
+  "scripts": {
+    "start": "node --no-warnings --expose-gc --max-old-space-size=1024 --max-semi-space-size=64 --experimental-global-webcrypto index.js"
+  },
+  "env": {
+    "SESSION_ID": {
+      "description": "Required WhatsApp session ID. Use the PROWL format: PROWL:~ followed by your base64 session value.",
+      "value": "",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "Display name used in menus, connection notices, and bot replies. Defaults to PROWL.",
+      "value": "PROWL",
+      "required": false
+    },
+    "BOT_PREFIX": {
+      "description": "Command prefix used by PROWL, such as . or !. Defaults to a period.",
+      "value": ".",
+      "required": false
+    },
+    "BOT_MODE": {
+      "description": "Initial operating mode. Supported values include public, private, group, solo, sudo, super, buttons, and channel.",
+      "value": "public",
+      "required": false
+    },
+    "BOT_TIMEZONE": {
+      "description": "Timezone used for menu clocks, schedules, and time-related commands, for example Africa/Nairobi or America/New_York.",
+      "value": "UTC",
+      "required": false
+    },
+    "OWNER_NUMBER": {
+      "description": "Owner WhatsApp number in international format without a plus sign. Example: 254700000000.",
+      "value": "",
+      "required": false
+    },
+    "DATABASE_URL": {
+      "description": "Optional PostgreSQL connection URL for cloud persistence. Leave blank to use the included SQLite storage.",
+      "value": "",
+      "required": false
+    },
+    "MONGODB_URI": {
+      "description": "Optional MongoDB connection URL for persistent cloud storage. Leave blank unless MongoDB is configured.",
+      "value": "",
+      "required": false
+    },
+    "APIX_API_KEY": {
+      "description": "Optional APIX key for supported AI and media commands.",
+      "value": "",
+      "required": false
+    },
+    "PTERODACTYL_URL": {
+      "description": "Optional Pterodactyl panel URL used by panel-management commands.",
+      "value": "",
+      "required": false
+    },
+    "PTERODACTYL_KEY": {
+      "description": "Optional Pterodactyl Application API key. Only configure this when panel-management commands are required.",
+      "value": "",
+      "required": false
+    },
+    "PAYSTACK_KEY": {
+      "description": "Optional Paystack secret key for payment-related commands. Do not commit or share this value.",
+      "value": "",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
   "buildpacks": [
-    { "url": "heroku/nodejs" }
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
   ]
 }
