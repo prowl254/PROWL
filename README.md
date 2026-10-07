@@ -9,7 +9,7 @@
 <p align="center"><strong>A powerful WhatsApp bot built for reliable everyday automation.</strong><br>Fast commands, media tools, group utilities, owner controls, games, menus, and persistent sessions.</p>
 
 <p align="center">
-  <a href="https://github.com/peace-amani/prowl-feature-loader"><img src="https://img.shields.io/badge/PROWL-private%20source-111815?style=for-the-badge&logo=github&logoColor=white" alt="PROWL source"></a>
+  <a href="https://github.com/prowl254/PROWL"><img src="https://img.shields.io/badge/PROWL-private%20source-111815?style=for-the-badge&logo=github&logoColor=white" alt="PROWL source"></a>
   <a href="https://prowl.pairsite.space"><img src="https://img.shields.io/badge/Pair%20Site-Open%20Pairing-75F6A4?style=for-the-badge&logo=whatsapp&logoColor=061109" alt="Open PROWL Pair Site"></a>
   <a href="./deployment/index.html"><img src="https://img.shields.io/badge/deploy-PROWL-75F6A4?style=for-the-badge&logo=rocket&logoColor=061109" alt="Deploy PROWL"></a>
   <a href="https://github.com/peace-amani/prowl-feature-loader/commits/main"><img src="https://img.shields.io/github/last-commit/peace-amani/prowl-feature-loader?style=for-the-badge&color=163c28" alt="Last update"></a>
