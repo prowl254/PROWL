@@ -1,0 +1,10 @@
+{
+  "name": "prowl-feature-loader",
+  "description": "PROWL feature loader",
+  "repository": "https://github.com/peace-amani/rowl",
+  "keywords": ["prowl", "whatsapp", "bot", "loader"],
+  "stack": "heroku-24",
+  "buildpacks": [
+    { "url": "heroku/nodejs" }
+  ]
+}
